@@ -12,6 +12,7 @@
 		4CC48F451C8EDBF7006FD6AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CC48F431C8EDBF7006FD6AF /* Main.storyboard */; };
 		4CC48F471C8EDBF7006FD6AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CC48F461C8EDBF7006FD6AF /* Assets.xcassets */; };
 		4CC48F4A1C8EDBF7006FD6AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CC48F481C8EDBF7006FD6AF /* LaunchScreen.storyboard */; };
+		4CC48FAE1C8F0209006FD6AF /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC48FAD1C8F0209006FD6AF /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		4CC48F461C8EDBF7006FD6AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4CC48F491C8EDBF7006FD6AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4CC48F4B1C8EDBF7006FD6AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CC48FAD1C8F0209006FD6AF /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				4CC48F3F1C8EDBF7006FD6AF /* AppDelegate.swift */,
 				4CC48F411C8EDBF7006FD6AF /* ViewController.swift */,
 				4CC48F431C8EDBF7006FD6AF /* Main.storyboard */,
+				4CC48FAD1C8F0209006FD6AF /* ResultViewController.swift */,
 				4CC48F461C8EDBF7006FD6AF /* Assets.xcassets */,
 				4CC48F481C8EDBF7006FD6AF /* LaunchScreen.storyboard */,
 				4CC48F4B1C8EDBF7006FD6AF /* Info.plist */,
@@ -138,6 +141,7 @@
 			files = (
 				4CC48F421C8EDBF7006FD6AF /* ViewController.swift in Sources */,
 				4CC48F401C8EDBF7006FD6AF /* AppDelegate.swift in Sources */,
+				4CC48FAE1C8F0209006FD6AF /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +289,7 @@
 				4CC48F501C8EDBF7006FD6AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

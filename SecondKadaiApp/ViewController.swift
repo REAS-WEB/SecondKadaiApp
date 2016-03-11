@@ -1,14 +1,9 @@
-//
-//  ViewController.swift
-//  SecondKadaiApp
-//
-//  Created by REAS WEB CONSULTING on 2016/03/08.
-//  Copyright © 2016年 takayuki.sato. All rights reserved.
-//
 
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var textField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +13,16 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
+        // segueから遷移先のResultViewControllerを取得する
+        let resultViewController:ResultViewController = segue.destinationViewController as! ResultViewController
+        // テキストフィールド
+        resultViewController.namae = textField.text
+    }
+    
+    @IBAction func unwind(segue: UIStoryboardSegue) {
     }
 
 
