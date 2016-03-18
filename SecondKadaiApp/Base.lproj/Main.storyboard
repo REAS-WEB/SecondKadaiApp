@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,19 +18,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EV8-U5-zhU">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EV8-U5-zhU">
                                 <rect key="frame" x="240" y="65" width="120" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="aNu-As-McB"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQq-9H-3OB">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQq-9H-3OB">
                                 <rect key="frame" x="270" y="110" width="60" height="30"/>
                                 <state key="normal" title="あいさつ"/>
                                 <connections>
                                     <segue destination="PBp-qi-ycH" kind="show" id="dPc-Y4-Nb9"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="名前を入力してください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIO-Rf-eQC">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名前を入力してください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIO-Rf-eQC">
                                 <rect key="frame" x="207" y="30" width="187" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -39,7 +43,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="DIO-Rf-eQC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HPe-eT-1Jw"/>
+                            <constraint firstItem="EV8-U5-zhU" firstAttribute="top" secondItem="DIO-Rf-eQC" secondAttribute="bottom" constant="14" id="JDZ-mO-1ow"/>
+                            <constraint firstItem="EV8-U5-zhU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="65" id="ksw-uY-QmT"/>
                             <constraint firstItem="EV8-U5-zhU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pX3-8j-xik"/>
+                            <constraint firstItem="bQq-9H-3OB" firstAttribute="top" secondItem="EV8-U5-zhU" secondAttribute="bottom" constant="15" id="yut-Sq-LAR"/>
                             <constraint firstItem="bQq-9H-3OB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ywi-Zr-MLT"/>
                         </constraints>
                     </view>
@@ -63,24 +70,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BdW-Fl-vOJ">
-                                <rect key="frame" x="240" y="30" width="120" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tzi-dO-p2O">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tzi-dO-p2O">
                                 <rect key="frame" x="285" y="65" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dmC-TS-bkB"/>
+                                </constraints>
                                 <state key="normal" title="戻る"/>
                                 <connections>
                                     <segue destination="sre-UK-1pi" kind="unwind" unwindAction="unwind:" id="g42-nc-kY5"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BdW-Fl-vOJ">
+                                <rect key="frame" x="20" y="40" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="BdW-Fl-vOJ" firstAttribute="centerX" secondItem="1eA-6s-o9G" secondAttribute="centerX" id="5gL-Kn-1uM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BdW-Fl-vOJ" secondAttribute="trailing" id="4Et-yS-r8E"/>
+                            <constraint firstItem="tzi-dO-p2O" firstAttribute="top" secondItem="BdW-Fl-vOJ" secondAttribute="bottom" constant="4" id="PvJ-na-K0Q"/>
+                            <constraint firstItem="HPE-AX-FO4" firstAttribute="top" secondItem="tzi-dO-p2O" secondAttribute="bottom" constant="505" id="QvU-Kh-gY0"/>
                             <constraint firstItem="tzi-dO-p2O" firstAttribute="centerX" secondItem="1eA-6s-o9G" secondAttribute="centerX" id="jzJ-Bz-Bbm"/>
+                            <constraint firstItem="BdW-Fl-vOJ" firstAttribute="top" secondItem="7QD-0K-KR0" secondAttribute="bottom" constant="20" id="mI6-r7-VQ8"/>
+                            <constraint firstItem="BdW-Fl-vOJ" firstAttribute="leading" secondItem="1eA-6s-o9G" secondAttribute="leadingMargin" id="vi6-od-IPf"/>
                         </constraints>
                     </view>
                     <connections>
@@ -90,7 +104,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nv5-IM-peH" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="sre-UK-1pi" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="687" y="962"/>
+            <point key="canvasLocation" x="695" y="948"/>
         </scene>
     </scenes>
 </document>
